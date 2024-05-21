@@ -74,14 +74,27 @@
                     <label for="title" class="col-form-label">Title</label>
                 </div>
                 <div class=" form-group mb-2">
-                    <input type="text" class="form-control" id="title" placeholder="Title">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Title
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <select name="Title"></select>
+                            <a class="dropdown-item" href="#">Mr.</a>
+                            <a class="dropdown-item" href="#">Ms.</a>
+                            <a class="dropdown-item" href="#">Mrs.</a>
+                            <a class="dropdown-item" href="#">Dr.</a>
+                            <a class="dropdown-item" href="#">Other</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="form-row align-items-centermt mt-3">
                 <div class="col-md-4">
                     <label for="firstName" class="col-form-label">First Name</label>
                 </div>
-                <div class=" form-group mb-2">
+                <div class="col-md-8 mb-2">
                     <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
                     <p id="fNameMsg"></p>
                 </div>
@@ -90,7 +103,7 @@
                 <div class="col-md-4">
                     <label for="lastName" class="col-form-label">Last Name</label>
                 </div>
-                <div class=" form-group mb-2">
+                <div class="col-md-8 mb-2">
                     <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
                     <p id="lNameMsg"></p>
                 </div>
@@ -99,8 +112,8 @@
                 <div class="col-md-4">
                     <label for="email" class="col-form-label">Email</label>
                 </div>
-                <div class=" form-group mb-2">
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                <div class="col-md-8 mb-2">
+                    <input type="email" class="form-control " id="email" placeholder="Enter email">
                     <p id="emailMsg"></p>
                 </div>
             </div>
@@ -108,7 +121,7 @@
                 <div class="col-md-4">
                     <label for="dateOfBirth" class="col-form-label">Date of Birth</label>
                 </div>
-                <div class=" form-group mb-2">
+                <div class="col-md-8 mb-2">
                     <input type="date" class="form-control" id="dateOfBirth">
                 </div>
             </div>
@@ -116,12 +129,12 @@
                 <div class="col-md-4">
                     <label for="phone" class="col-form-label">Phone</label>
                 </div>
-                <div class=" form-group mb-2">
+                <div class="col-md-8 mb-2">
                     <input type="phone" class="form-control" id="phone" placeholder="Enter phone number">
                     <p id="phoneMsg"></p>
                 </div>
             </div>
-            <div class="form-row align-items-center mt-2">
+            <div class="form-row align-items-center mt-3">
                 <button type="submit" class="btn btn-primary mt-3">Submit</button>
             </div>
             
