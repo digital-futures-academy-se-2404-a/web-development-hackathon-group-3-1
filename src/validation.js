@@ -1,38 +1,27 @@
-// Title: Required
-
-
-
-// Email: Regex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$" 
-
-
-
-// Each field displays red text describing necessary inputs if invalid and gains red border
 
 
 //interface connection links
 const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const email = document.querySelector("#email");
-const dob = document.querySelector("#dateOfBirth");
 const phone = document.querySelector("#phone");
 const submitBtn = document.querySelector("#submit"); //Submit Button
 
-const fNameMsg = document.querySelector("#firstname > p"); // Error Msg for F.Name
-const lNameMsg = document.querySelector("#lastname > p"); // Error Msg for L.Name
-const emailMsg = document.querySelector("#email > p"); // Error Msg for email
-const dobMsg = document.querySelector("#dateOfBirth > p"); // Error Msg for date of birth
-const phoneMsg = document.querySelector("#phone > p"); // Error Msg for phone number
+const fNameMsg = document.querySelector("#fNameMsg"); // Error Msg for F.Name
+const lNameMsg = document.querySelector("#lNameMsg"); // Error Msg for L.Name
+const emailMsg = document.querySelector("#emailMsg"); // Error Msg for email
+const phoneMsg = document.querySelector("#phoneMsg"); // Error Msg for phone number
 
 //validity states
 
 let firstNameValid = false;
 let lastNameValid = false;
 let emailValid = false;
-let dobValid = false;
 let phoneValid = false;
 
 function buttonFunctional() {
-    submit.disabled = !(firstNameValid && lastNameValid && emailValid && dobValid && phoneValid);
+    submitBtn.disabled = !(firstNameValid && lastNameValid && emailValid && phoneValid);
+    
 }
 
 
@@ -43,26 +32,38 @@ submit.addEventListener('click', (event) => {
 
 firstName.addEventListener('change', (e) => {
     // Fires every time user clicks out of scope
-    if (validateName(firstName.value)) {
-        firstNameValid = true;
-        validBox(firstName);
-    } else {
+    if (!validateNameCharacters(firstName.value)) {
         firstNameValid = false;
         invalidBox(firstName);
+        console.dir(fNameMsg);
+        errorMessage(fNameMsg, "Only lower and upper case letters are allowed.")
+    } else if (!validateNameLength(firstName.value)) {
+        firstNameValid = false;
+        invalidBox(firstName);
+        errorMessage(fNameMsg, "The First Name entered is either too short or too long.")
+    } else {
+        firstNameValid = true;
+        validBox(firstName);
+        disableError(fNameMsg);
     }
     buttonFunctional();
 });
 
 lastName.addEventListener("change", (e) => {
     // Fires every time user clicks out of scope
-    if (validateName(lastName.value)){
-        lastNameValid = true;
-        validBox(lastName);
-    } else {
+    if (!validateNameCharacters(lastName.value)) {
         lastNameValid = false;
         invalidBox(lastName);
-    }
-    buttonFunctional();
+        errorMessage(lNameMsg, "Only lower and upper case letters are allowed."); }
+    else if (!validateNameLength(lastName)) {
+        lastNameValid = false;
+        invalidBox(lastName);
+        errorMessage(lNameMsg, "The Last Name entered is either too short or too long.");}
+    else { // All good, do the good stuff
+        lastNameValid = true;
+        validBox(lastName);
+        disableError(lNameMsg); }
+    buttonFunctional();// end of function
 });
 
 email.addEventListener("change", (e) => {
@@ -70,15 +71,13 @@ email.addEventListener("change", (e) => {
     if (validateEmail(email.value)) {
         emailValid = true;
         validBox(email);
+        disableError(emailMsg)
     } else {
         emailValid = false;
         invalidBox(email)
+        errorMessage(emailMsg, "Email address not valid");
     }
     buttonFunctional();
-});
-
-dob.addEventListener("change", (e) => {
-  // Fires every time user clicks out of scope
 });
 
 phone.addEventListener("change", (e) => {
@@ -95,41 +94,41 @@ phone.addEventListener("change", (e) => {
     buttonFunctional();
 });
 
-function validateName(input) {
-  // F.Name: Only lower & Upper case
-  // Msg displayed = "Only lower and upper case letters are allowed."
-  // Must be longer than 1 cha + shorter than 15
-  // Msg displayed = "The First Name entered is either too short or too long."
-  // L.Name: Only lower & Upper case
-  // Msg displayed = "Only lower and upper case letters are allowed."
-  // Must be longer than 1 cha + shorter than 15
-    // Msg displayed = "The Last Name entered is either too short or too long."
-    
-    let regex = new RegExp('^[a-zA-Z]{1,15}$');
+function validateNameLength(input) {
+    // Checks length is between 1 and 15 characters
+    let regex = new RegExp(".{1,15}$");
     return regex.test(input);
-};
-
-
-function validateEmail(input) {
-    return /^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$/.test(input);
 }
 
-function validatePhone(input) {
-  return /^[+][0-9]{11,13}$|[0-9]{11}$/.test(input);
+function validateNameCharacters(input) {
+    let regex = new RegExp("^[a-zA-Z]{0,}$");
+    return regex.test(input);
+}
+
+function validateEmail(input) {
+    return RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$").test(input);
+}
+
+
+function validatePhone(input) {  
+    // Remove all spaces from the phone number
+    const cleanedNumber = input.replace(/\s+/g, "");
+    // Define a regular expression for a valid phone number (digits only)
+    const phoneNumberPattern = /^\d+$/;
+    // Test the cleaned number against the regular expression
+    return phoneNumberPattern.test(cleanedNumber);
 }
 
 const validBox = (element) => {
-    element.style.borderColor = "black";
-    
+    element.style.borderColor = null;
 }
 
 const invalidBox = (element => {
     element.style.borderColor = "red";
-    
 })
 
 function errorMessage(element, text) {
-    element.textContent = text;
+    element.innerText = text;
     element.style.color = "red";
 };
 
