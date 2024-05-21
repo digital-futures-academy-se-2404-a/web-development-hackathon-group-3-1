@@ -7,65 +7,142 @@
     <title>Document</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="css-style.css"
+    />
     <script src="validation.js"></script>
 </head>
 
 <body>
     <!-- Navbar -->
-    <iframe src="navbar.html" frameborder="0" width="100%" height="100"></iframe>
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="path_to_your_image.jpg" width="30" height="30" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./whats-on.html">Whats's on</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./sign-up.html">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!-- Sections -->
     <div class="container">
-        <div class="row">
-        <div class="col-md-6"> <!-- Left side -->
-            <div class="row">
+        <div class="row row-with-margin">
+        <div id="left-section" class="col-md-6" > <!-- Left side -->
+            <div class="row row-with-margin">
                 <div class="col-12">
-                    <img class="img-responsive" style="max-width:100%;"
-                        src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg" alt="Image" />
+                    <div class="image-div">
+                        <img class="wide-img w-100" 
+                            src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg" alt="Image" />
+                    </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-with-margin">
                 <div class="col-12">
-                    <img class="img-responsive" style="max-width:100%;"
-                        src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg" alt="Image" />
+                    <div class="image-div">
+                        <img class="wide-img w-100" 
+                            src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg" alt="Image" />
+                    </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-with-margin">
                 <div class="col-12">
-                    <img class="img-responsive" style="max-width:100%;"
-                        src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg" alt="Image" />
+                    <div class="image-div">
+                        <img class="wide-img w-100" 
+                            src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg" alt="Image" />
+                    </div>
                 </div>
             </div>
         </div>
-        <div clas="col-md-6"> <!-- Right side -->
-            <form>
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" class="form-control" id="title" placeholder="Enter title">
+        <div class="col-md-6"> <!-- Right side -->
+        <form>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-md-4">
+                    <label for="title" class="col-form-label">Title</label>
                 </div>
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
+                <div class=" form-group mb-2">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Title
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            
+                            <a class="dropdown-item" href="#">Mr.</a>
+                            <a class="dropdown-item" href="#">Ms.</a>
+                            <a class="dropdown-item" href="#">Mrs.</a>
+                            <a class="dropdown-item" href="#">Dr.</a>
+                            <a class="dropdown-item" href="#">Other</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row align-items-centermt mt-3">
+                <div class="col-md-4">
+                    <label for="firstName" class="col-form-label">First Name</label>
+                </div>
+                <div class="col-md-8 mb-2">
                     <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                    <p id="fNameMsg"></p>
                 </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-md-4">
+                    <label for="lastName" class="col-form-label">Last Name</label>
+                </div>
+                <div class="col-md-8 mb-2">
                     <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                    <p id="lNameMsg"></p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-md-4">
+                    <label for="email" class="col-form-label">Email</label>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+                <div class="col-md-8 mb-2">
+                    <input type="email" class="form-control " id="email" placeholder="Enter email">
+                    <p id="emailMsg"></p>
                 </div>
-                <div class="form-group">
-                    <label for="dateOfBirth">Date of Birth</label>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-md-4">
+                    <label for="dateOfBirth" class="col-form-label">Date of Birth</label>
+                </div>
+                <div class="col-md-8 mb-2">
                     <input type="date" class="form-control" id="dateOfBirth">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-md-4">
+                    <label for="phone" class="col-form-label">Phone</label>
+                </div>
+                <div class="col-md-8 mb-2">
+                    <input type="phone" class="form-control" id="phone" placeholder="Enter phone number">
+                    <p id="phoneMsg"></p>
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </div>
+            
+        </form>
+            
+            
         </div>
+        
     </div> <!-- Container-->
     <!-- Footer -->
     <iframe
