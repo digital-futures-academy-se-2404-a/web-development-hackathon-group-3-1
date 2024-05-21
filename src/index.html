@@ -13,27 +13,51 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="css-style.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <!-- Footer -->
-    <iframe
-      src="navbar.html"
-      frameborder="0"
-      width="100%"
-      height="100"
-    ></iframe>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="path_to_your_image.jpg" width="30" height="30" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./whats-on.html">Whats's on</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sign-up.html">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- Sections -->
     <div class="container">
-      <div class="row">
+      <div class="row row-with-margin">
         <!-- CSS: container->row should have margins (or create a class for those rows)-->
         <div class="col-xs-12 col-md-9">
           <div class="image-div">
             <img
-              class="img-fluid"
-              style="max-width: 100%"
-              src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg"
+              class="wide-img w-100"
+              src="https://lh3.googleusercontent.com/proxy/K055MYRfEKXSjxWnqZjvO2ad4dkteiyf2WI3h2Yv8Envi1rMstcBVgovgnACdeAxzpbXcJqZsg9TnH0ylBAKQzJ2dAb0Q3EJAlj_4TA"
               alt="Image"
             />
           </div>
@@ -41,20 +65,23 @@
         <div class="col-xs-12 col-md-3">
           <div class="card">
             <div class="card-body">
-              <p class="card-title">Card content blablabla</p>
+              <h3 class="card-title">The Batman</h3>
+              <p>
+                In his second year of fighting crime, Batman uncovers corruption
+                in Gotham City that connects to his own family.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row row-with-margin">
         <div class="col-xs-12 col-md-9">
           <!-- Image is background of image-div-->
-          <div class="image-div" style="background-color: #f5f5f5">
+          <div class="image-div">
             <img
-              class="img-fluid"
-              style="max-width: 100%"
-              src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg"
+              class="wide-img w-100"
+              src="https://lh6.googleusercontent.com/proxy/glQynDhR2CRGBROclmIvDZYv0MlQ1TkxYSK9nGONpQ6ZveO63_EBRvofjJZSMMV8c-EuwThFOr62eoxhWyxnLNe1N3zq7r-QFBYiVQVK"
               alt="Image"
             />
           </div>
@@ -62,21 +89,25 @@
         <div class="col-xs-12 col-md-3">
           <div class="card">
             <div class="card-body">
-              <p class="card-title">Card content blablabla</p>
+              <h3 class="card-title">Moonfall</h3>
+              <p>
+                A mysterious force knocks the Moon from its orbit around Earth
+                and sends it hurtling on a collision course with life as we know
+                it.
+              </p>
             </div>
           </div>
         </div>
       </div>
       <!-- Row-->
 
-      <div class="row">
+      <div class="row row-with-margin">
         <div class="col-xs-12 col-md-9">
           <!-- Image is background of image-div-->
           <div class="image-div">
             <img
-              class="img-fluid"
-              style="max-width: 100%"
-              src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg"
+              class="wide-img w-100"
+              src="https://wallpaperswide.com/download/interstellar_4-wallpaper-3360x1050.jpg"
               alt="Image"
             />
           </div>
@@ -84,7 +115,11 @@
         <div class="col-xs-12 col-md-3">
           <div class="card">
             <div class="card-body">
-              <p class="card-title">Card content blablabla</p>
+              <h3 class="card-title">Interstellar</h3>
+              <p>
+                A team of explorers travel through a wormhole in space in an
+                attempt to ensure humanity's survival.
+              </p>
             </div>
           </div>
         </div>

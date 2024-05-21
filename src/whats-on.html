@@ -9,20 +9,46 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="css-style.css" />
   </head>
 
   <body>
     <!-- Navbar -->
-    <iframe
-      src="navbar.html"
-      frameborder="0"
-      width="100%"
-      height="100"
-    ></iframe>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="path_to_your_image.jpg" width="30" height="30" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./whats-on.html">Whats's on</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sign-up.html">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- Sections -->
     <div class="container">
-      <div class="row">
+      <div class="row row-with-margin">
         <!-- TODO CSS: container->row should have margins (or create a class for those rows) -->
         <div class="col-xs-12 col-md-9">
           <div id="carousel" class="image-div">
@@ -57,7 +83,7 @@
                 <div class="carousel-item">
                   <img
                     class="d-block w-100"
-                    src="https://via.placeholder.com/800"
+                    src="https://i.ebayimg.com/images/g/dQkAAOSwPfZlvUDc/s-l1200.webp"
                     alt="Second slide"
                   />
                 </div>
@@ -94,19 +120,24 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
+            <!-- Carousel example-->
           </div>
+          <!-- Carousel -->
         </div>
+        <!-- Column-->
         <div class="col-xs-12 col-md-3">
           <div class="card">
             <div class="card-body">
               <p class="card-title">Card content blablabla</p>
             </div>
           </div>
+          <!-- Card -->
         </div>
+        <!-- Column -->
       </div>
       <!-- Row 1 -->
 
-      <div class="row">
+      <div class="row row-with-margin">
         <div class="col-xs-12 col-md-3">
           <div class="card">
             <div class="card-body">
@@ -118,7 +149,7 @@
           <!-- Image is background of image-div-->
           <div class="image-div">
             <img
-              class="img-fluid"
+              class="wide-img w-100"
               src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg"
               alt="Image"
             />
@@ -127,7 +158,7 @@
       </div>
       <!-- Row 2 -->
 
-      <div class="row">
+      <div class="row-with-margin">
         <div class="ol-sm-6 col-md-3">
           <!-- Image is background of image-div-->
           <div class="image-div">

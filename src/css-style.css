@@ -6,12 +6,12 @@
     gap: 20px;
 
 }
-
+/*
 .row{
     grid-column:1/13;
     max-height: 25%;
 }
-
+*/
 .row2 {
     grid-column: 1/13;
     max-height: 25%;
@@ -22,12 +22,13 @@
     max-height: 25%;
 }
 
+/*
 .image-div{
     width:70%;
     height: 100%;
     float: left;
 }
-
+*/
 #img-one {
     height: 100%;
     width: 100%;
@@ -61,6 +62,22 @@
     width: 70%;
     height: 100%;
     float: right;
+}
+
+.row-with-margin {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.image-div {
+    height: 100%;
+}
+
+.wide-img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .text-div-op {
