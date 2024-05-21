@@ -1,10 +1,4 @@
-.contentSection {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
 
-}
 /*
 .row{
     grid-column:1/13;
@@ -77,6 +71,8 @@
     height: auto;
     max-height: 100%;
     max-width: 100%;
+    border-radius: 30px;
+    border: 5px solid #9ab2cc;
 }
 
 .text-div-op {
@@ -90,18 +86,93 @@
 }
 
 .card {
-    
-    padding: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-height: 100%;
+    padding: 5px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: #03222D;
+    overflow: auto;
+    color: #9ab2cc;
 }
+
 
 .footer {
     position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding-top:  20px;
+    padding-bottom: 10px;
+    background-color: #03222D;
+    color: #9ab2cc;
+    clear: both;
+    
+}
+
+#main-container {
+    margin-top: 100px;
+}
+
+#submit {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+#signup-card {
+    max-height: 100%;
+    padding: 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#navbar-img { 
+    width: 70px;
+        height: 70px;
+}
+.navbar-nav {
+    font-size: 20px; /* Adjust as needed */
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar-dark{
+    background-color: #03222D !important;
+}
+
+.nav-item {
+    flex-grow: 1;
     text-align: center;
 }
+
+body {
+    padding-top: 70px; /*Navbar height with fixed position*/
+    padding-bottom: 165px;
+    background-image: url("../images/DFCBackdrop2.jpg");
+    background-size: 40%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.2);
+    
+        /* This is the color overlaying the image */
+}
+
+.form-control {
+    background-color: #9ab2cc;
+    color: #03222D;
+}
+.form-control::placeholder {
+    color: #03222D;
+    /* Change to the color you want */
+}
+
 
 

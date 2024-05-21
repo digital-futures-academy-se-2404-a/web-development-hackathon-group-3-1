@@ -9,14 +9,18 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="css-style.css" />
   </head>
 
-  <body>
+  <body class="body-container">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="path_to_your_image.jpg" width="30" height="30" alt="" />
+      <a class="navbar-brand" href="./index.html">
+        <img id="navbar-img" src="../images/DFCLogo.jpg" alt="" />
       </a>
       <button
         class="navbar-toggler"
@@ -31,13 +35,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="./index.html"
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./whats-on.html">Whats's on</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="./whats-on.html">What's on</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./sign-up.html">Sign up</a>
@@ -47,7 +51,7 @@
     </nav>
 
     <!-- Sections -->
-    <div class="container">
+    <div id="main-container" class="container">
       <div class="row row-with-margin">
         <div class="col-xs-12 col-md-9">
           <div id="carousel" class="image-div">
@@ -74,21 +78,21 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    class="d-block w-100"
+                    class="d-block w-100 wide-img"
                     src="https://www.uhclthesignal.com/wordpress/wp-content/uploads/2018/06/share.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
-                    class="d-block w-100"
+                    class="d-block w-100 wide-img"
                     src="https://pbs.twimg.com/media/GGZkkK2WAAA4XIA.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
-                    class="d-block w-100"
+                    class="d-block w-100 wide-img"
                     src="https://i.ebayimg.com/images/g/EWgAAOSwyP5aJeiu/s-l1200.jpg"
                     alt="Third slide"
                   />
@@ -127,7 +131,12 @@
         <div class="col-xs-12 col-md-3">
           <div class="card">
             <div class="card-body">
-              <p class="card-title">Now showing...</p>
+              <h3 class="card-title">Now showing...</h3>
+              <p>
+                Star wars: The last Jedi <br />
+                Avengers: Infinity War <br />
+                Dune 2
+              </p>
             </div>
           </div>
           <!-- Card -->
@@ -140,8 +149,11 @@
         <div class="col-xs-12 col-md-3">
           <div class="card">
             <div class="card-body">
-              <p class="card-title">
-                Opening times: Sun-Thur: 10:00-22:00 Fri-Sat: 10:00-23:00
+              <p class="card-title"></p>
+              <h3>Opening times:</h3>
+              <p>
+                Sun-Thur: 10:00-22:00 <br />
+                Fri-Sat: 10:00-23:00
               </p>
             </div>
           </div>
@@ -165,16 +177,17 @@
           <div class="image-div">
             <img
               class="wide-img w-100"
-              src="https://miro.medium.com/v2/resize:fit:1200/1*uATEuN73sO2shRYWWjxhVg.jpeg"
+              src="https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg"
               alt="Image"
             />
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
           <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Oppenheimer</h3>
-            </div>
+            <h3 class="card-title">Oppenheimer</h3>
+            <p>IMDB : 8.3 stars</p>
+            <p>Rotten Tomatoes : 93% Fresh</p>
+            <p>'This movie is all about causing a big bang' some guy reviews</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
@@ -207,12 +220,37 @@
     </div>
     <!-- Container-->
     <!-- Footer -->
-    <iframe
-      src="footer.html"
-      frameborder="0"
-      width="100%"
-      height="100"
-    ></iframe>
+    <footer class="footer">
+      <div class="container"></div>
+        <div class="row">
+          <div class="col-xs-12, col-md-9, col text-center">
+            <h5>Follow us on</h5>
+            <div class="social-icons, col text-center">
+              <a href="https://www.facebook.com" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.twitter.com" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.reddit.com" target="_blank"
+                ><i class="fab fa-reddit"></i
+              ></a>
+              <a href="https://www.tiktok.com" target="_blank"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12, col-md-9, col text-center">
+            <p class="text-muted">&copy; DF Cinemas - 2024 -</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

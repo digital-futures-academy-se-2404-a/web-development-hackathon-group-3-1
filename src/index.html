@@ -18,8 +18,8 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="path_to_your_image.jpg" width="30" height="30" alt="" />
+      <a class="navbar-brand" href="./index.html">
+        <img id="navbar-img" src="../images/DFCLogo.jpg" alt="" />
       </a>
       <button
         class="navbar-toggler"
@@ -40,7 +40,7 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./whats-on.html">Whats's on</a>
+            <a class="nav-link" href="./whats-on.html">What's on</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./sign-up.html">Sign up</a>
@@ -50,10 +50,10 @@
     </nav>
 
     <!-- Sections -->
-    <div class="container">
+    <div class="container" id="main-container">
       <div class="row row-with-margin">
         <!-- CSS: container->row should have margins (or create a class for those rows)-->
-        <div class="col-xs-12 col-md-9">
+        <div class="col-sm-12 col-lg-9">
           <div class="image-div">
             <img
               class="wide-img w-100"
@@ -62,7 +62,7 @@
             />
           </div>
         </div>
-        <div class="col-xs-12 col-md-3">
+        <div class="col-sm-12 col-lg-3">
           <div class="card">
             <div class="card-body">
               <h3 class="card-title">The Batman</h3>
@@ -76,7 +76,18 @@
       </div>
 
       <div class="row row-with-margin">
-        <div class="col-xs-12 col-md-9">
+        <div class="col-sm-12 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Moonfall</h3>
+              <p>
+                A mysterious force knocks the Moon from its orbit around Earth
+                and sends it hurtling towards earth. it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-9">
           <!-- Image is background of image-div-->
           <div class="image-div">
             <img
@@ -86,23 +97,11 @@
             />
           </div>
         </div>
-        <div class="col-xs-12 col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Moonfall</h3>
-              <p>
-                A mysterious force knocks the Moon from its orbit around Earth
-                and sends it hurtling on a collision course with life as we know
-                it.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- Row-->
 
       <div class="row row-with-margin">
-        <div class="col-xs-12 col-md-9">
+        <div class="col-sm-12 col-lg-9">
           <!-- Image is background of image-div-->
           <div class="image-div">
             <img
@@ -112,7 +111,7 @@
             />
           </div>
         </div>
-        <div class="col-xs-12 col-md-3">
+        <div class="col-sm-12 col-lg-3">
           <div class="card">
             <div class="card-body">
               <h3 class="card-title">Interstellar</h3>
@@ -129,12 +128,37 @@
     <!-- Container-->
 
     <!-- Footer -->
-    <iframe
-      src="footer.html"
-      frameborder="0"
-      width="100%"
-      height="100"
-    ></iframe>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12, col-md-9, col text-center">
+            <h5>Follow us on</h5>
+            <div class="social-icons, col text-center">
+              <a href="https://www.facebook.com" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.twitter.com" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.reddit.com" target="_blank"
+                ><i class="fab fa-reddit"></i
+              ></a>
+              <a href="https://www.tiktok.com" target="_blank"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12, col-md-9, col text-center">
+            <p class="text-muted">&copy; DF Cinemas - 2024 -</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
